@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh" xmlns:th="//www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>登录页</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/static/css/login/normalize.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/static/css/login/default.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/static/css/login/styles.css}">
+</head>
+<body>
+	<div class="htmleaf-container">
+		<div class="wrapper">
+			<div class="container">
+				<h1>Welcome</h1>
+				<p style="color: red;" th:if="${message != null}" th:text="${message}"></p>
+				<form class="form" method="post" th:action="@{/login}">
+					<input type="text" name="userName" placeholder="用户名">
+					<input type="password" name="password" placeholder="密码">
+					<button type="submit" id="login-button">登录</button>
+				</form>
+			</div>
+			<ul class="bg-bubbles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
